@@ -5,7 +5,7 @@
 // MySQL database connection
 $servername = "localhost";
 $username = "root1";
-$password = "";
+$password = "1234";
 $dbname = "user_comments";
 
 // Create connection
