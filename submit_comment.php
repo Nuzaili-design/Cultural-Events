@@ -5,6 +5,7 @@ $username = "root1"; // Replace 'root1' with your database username
 $password = ""; // Replace 'your_password' with your database password
 $dbname = "user_comments"; 
 
+
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
