@@ -6,7 +6,7 @@
 $servername = "localhost";
 $username = "root1";
 $password = "";
-$dbname = "user_comments";
+$dbname = "user_comments"; 
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
