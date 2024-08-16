@@ -2,7 +2,7 @@
 // Database connection parameters
 $servername = "localhost"; 
 $username = "root1"; // Replace 'root1' with your database username
-$password = ""; // Replace 'your_password' with your database password
+$password = "1234"; // Replace 'your_password' with your database password
 $dbname = "user_comments"; 
 
 
