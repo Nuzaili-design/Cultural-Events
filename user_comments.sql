@@ -1,11 +1,4 @@
--- phpMyAdmin SQL Dump
--- version 5.2.1
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: Apr 02, 2024 at 12:26 AM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -71,9 +64,9 @@ CREATE TABLE `user_submissions` (
 --
 
 INSERT INTO `user_submissions` (`id`, `name`, `email`, `message`, `submission_time`) VALUES
-(12, 'student', 'azoz3211azoz@gmail.com', 'i like your website.', '2024-03-24 22:59:21'),
-(13, 'Ahmed', 'azoz3211azoz@gmail.com', 'hello, i want to come', '2024-03-24 23:04:01'),
-(14, 'weweew', 'azoz3211azoz@gmail.com', 'lkmnb', '2024-03-29 19:23:38');
+(12, 'student', 'azoz@gmail.com', 'i like your website.', '2024-03-24 22:59:21'),
+(13, 'Ahmed', 'aazoz@gmail.com', 'hello, i want to come', '2024-03-24 23:04:01'),
+(14, 'weweew', 'az11azoz@gmail.com', 'lkmnb', '2024-03-29 19:23:38');
 
 --
 -- Indexes for dumped tables
