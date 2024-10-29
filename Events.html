@@ -4,249 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #e9d4d4;
-            color: #333;
-        }
-
-        #okan {
-            color: rgb(0, 70, 128);
-        }
-
-        h1 {
-            margin-top: 20px;
-            font-size: 32px;
-            margin-left: 20px;
-            color: rgb(0, 70, 128);
-            
-        }
-
-        ol {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        ol li {
-            margin-bottom: 10px;
-            color: rgb(0, 70, 128);
-        }
-
-        hr {
-            border: none;
-            border-top: 1px solid #ddd;
-            margin: 20px 0;
-        }
-
-        .event {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-
-        .event-title {
-            color: #0056b3;
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .event-description {
-            font-style: italic;
-            color: #777;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #74b2f4;
-            color: #fff;
-            text-decoration: none;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .button:hover {
-            background-color: #0056b3;
-        }
-
-        form {
-            margin-top: 20px;
-            margin-left: 20px;
-            
-        }
-
-        label {
-            font-weight: bold;
-            color: rgb(0, 70, 128);
-            
-            
-        }
-
-        input[type="text"],
-        input {
-            width: 100%; 
-            max-width: 400px; 
-            padding: 10px;
-            margin-bottom: 10px;
-            border-radius: 30px;
-            border: 1px solid rgb(163, 159, 159);
-             box-sizing: border-box;
-            font-size: 16px;
-        }
-        input[type="text"]:focus,
-input:focus {
-    outline-color: rgb(0, 70, 128); 
-}
-
-        
-
-        input[type="submit"] {
-            background-color: #74b2f4;
-            color: #fff;
-            border: none;
-            max-width: 120px;
-            border-radius: 30px;
-            padding: 10px 20px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #0056b3;
-        }
-
-        #commentsSection {
-            margin-top: 20px;
-            
-        }
-        @media screen and (max-width: 768px) {
-            /* Adjustments for screens up to 768px wide */
-            h1 {
-                font-size: 24px;
-            }
-
-            .event {
-                padding: 15px;
-            }
-
-            .event-title {
-                font-size: 20px;
-            }
-
-            .event-description {
-                font-size: 16px;
-            }
-
-            form {
-                margin-left: 10px;
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            /* Adjustments for screens up to 480px wide */
-            h1 {
-                font-size: 20px;
-            }
-
-            .event {
-                padding: 10px;
-            }
-
-            .event-title {
-                font-size: 18px;
-            }
-
-            .event-description {
-                font-size: 14px;
-            }
-
-            form {
-                margin-left: 5px;
-            }
-        }
-    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-    <div class="event">
-        <h1 id="okan">Upcoming Events</h1>
-        <ol>
-            <li>CRUISE BOSPHORUS</li>
-            <li>Galata Tower</li>
-        </ol>
+<body class="bg-light text-dark">
+    <div class="container my-4">
+        <div class="p-4 bg-white rounded shadow-sm mb-4">
+            <h1 class="text-dark">Upcoming Events</h1>
+            <!-- CRUISE BOSPHORUS -->
+            <details class="mb-3">
+                <summary class="text-dark fs-5">CRUISE BOSPHORUS</summary>
+                <p class="text-muted fst-italic">Experience a beautiful cruise along the Bosphorus, seeing Istanbul's famous landmarks from the water. Perfect for enjoying the city's rich cultural backdrop.</p>
+            </details>
+            <!-- Dinner Cruise Bosphorus -->
+            <details class="mb-3">
+                <summary class="text-dark fs-5">Dinner Cruise Bosphorus</summary>
+                <p class="text-muted fst-italic">General information about the Bosphorus dinner and Turkish night show cruise with a private standard table (non-alcohol).</p>
+                <a href="EventDet.html" class="btn btn-secondary mt-2">Click for more</a>
+            </details>
+            <!-- Galata Tower -->
+            <details class="mb-3">
+                <summary class="text-dark fs-5">Galata Tower</summary>
+                <p class="text-muted fst-italic">This historic watchtower, also known as the Galata Kulesi Museum, stands at the end of Istanbul’s Istiklal shopping street, offering panoramic views of the city.</p>
+                <a href="Galata.html" class="btn btn-secondary mt-2">Click for more</a>
+                <a href="Gallery.html" class="btn btn-secondary mt-2 ms-2">Past events</a>
+            </details>
+        </div>
+
+        <hr>
+
+        <h2 class="text-secondary mb-4">Leave a Comment</h2>
+        <form id="commentForm" action="submit_comment.php" method="post" class="mb-5">
+            <div class="mb-3 w-50">
+                <label for="name" class="form-label">Name:</label>
+                <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+            <div class="mb-3 w-50">
+                <label for="comment" class="form-label">Comment:</label>
+                <textarea id="comment" name="comment" class="form-control" rows="4" required></textarea>
+            </div>
+            <input type="submit" value="Submit" class="btn btn-secondary">
+        </form>
     </div>
 
-    <div class="event">
-        <strong class="event-title" id="okan">Dinner Cruise Bosphorus:</strong>
-        <p class="event-description" id="okan">General information about Bosphorus dinner and Turkish night show cruise - private standard table (non-alcohol).</p>
-        <a href="EventDet.html" class="button">Click for more</a>
-    </div>
-
-    <div class="event">
-        <strong class="event-title" id="okan">Galata Tower:</strong>
-        <p class="event-description" id="okan">This historic watchtower, also known as the Galata Kulesi Museum, can be found at the end of Istanbul’s Istiklal shopping street.</p>
-        <a href="Galata.html" class="button">Click for more</a>
-        <a href="Gallery.html" class="button">past events</a>
-    </div>
-
-    <hr>
-
-    <h1>Leave a Comment</h1>
-    <form id="commentForm" action="submit_comment.php" method="post">
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" required><br>
-        <label for="comment">Comment:</label><br>
-        <input id="comment" name="comment" rows="3" cols="30" required><br> <!-- Adjusted cols -->
-        <input type="submit" value="Submit">
-        
-    </form>
-<script>
-            document.addEventListener('DOMContentLoaded', function() {
-                // Get the comment form
-                var commentForm = document.getElementById('commentForm');
-    
-                // Add event listener for form submission
-                commentForm.addEventListener('submit', function(event) {
-                    // Prevent default form submission
-                    event.preventDefault();
-    
-                    // Get form data
-                    var formData = new FormData(commentForm);
-    
-                    // Send form data using Fetch API
-                    fetch('submit_comment.php', {
-                        method: 'POST',
-                        body: formData
-                    })
-                    .then(response => {
-                        if (response.ok) {
-                            // Comment submitted successfully
-                            alert('Comment submitted successfully');
-                            // Clear the form
-                            commentForm.reset();
-                        } else {
-                            // Error handling
-                            alert('Failed to submit comment');
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Error:', error);
-                        alert('An error occurred. Please try again later.');
-                    });
-                });
-            });
-        </script>
-    <div id="commentsSection">
+    <div class="container" id="commentsSection">
         <!-- Comments will be displayed here -->
     </div>
 
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var commentForm = document.getElementById('commentForm');
+            commentForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                var formData = new FormData(commentForm);
+                fetch('submit_comment.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => {
+                    if (response.ok) {
+                        alert('Comment submitted successfully');
+                        commentForm.reset();
+                    } else {
+                        alert('Failed to submit comment');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('An error occurred. Please try again later.');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
