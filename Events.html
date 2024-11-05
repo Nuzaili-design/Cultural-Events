@@ -5,49 +5,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom container style with dark shadow */
+        .custom-container {
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            border-radius: 12px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8); /* Darker shadow */
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Dark shadow for form container */
+        .form-container {
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            border-radius: 12px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8); /* Darker shadow */
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Custom border color for input fields */
+        .form-control:focus {
+            border-color: #343a40; /* Dark color for focus border */
+            box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.25); /* Optional: subtle shadow */
+        }
+
+        /* Custom border and text color for active accordion button */
+        .accordion-button:not(.collapsed) {
+            color: #343a40; /* Dark text color for active item */
+            background-color: #f8f9fa; /* Light gray background for active item */
+            border-color: #343a40; /* Dark border color for active item */
+            box-shadow: inset 0 -1px 0 rgba(52, 58, 64, 0.25); /* Optional shadow */
+        }
+        
+        /* Custom border color for focused accordion button */
+        .accordion-button:focus {
+            border-color: #343a40; /* Dark border color on focus */
+            box-shadow: 0 0 0 0.25rem rgba(52, 58, 64, 0.25); /* Subtle dark shadow */
+        }
+    </style>
 </head>
 <body class="bg-light text-dark">
     <div class="container my-4">
-        <div class="p-4 bg-white rounded shadow-sm mb-4">
+        <div class="custom-container">
             <h1 class="text-dark">Upcoming Events</h1>
-            <!-- CRUISE BOSPHORUS -->
-            <details class="mb-3">
-                <summary class="text-dark fs-5">CRUISE BOSPHORUS</summary>
-                <p class="text-muted fst-italic">Experience a beautiful cruise along the Bosphorus, seeing Istanbul's famous landmarks from the water. Perfect for enjoying the city's rich cultural backdrop.</p>
-            </details>
-            <!-- Dinner Cruise Bosphorus -->
-            <details class="mb-3">
-                <summary class="text-dark fs-5">Dinner Cruise Bosphorus</summary>
-                <p class="text-muted fst-italic">General information about the Bosphorus dinner and Turkish night show cruise with a private standard table (non-alcohol).</p>
-                <a href="EventDet.html" class="btn btn-secondary mt-2">Click for more</a>
-            </details>
-            <!-- Galata Tower -->
-            <details class="mb-3">
-                <summary class="text-dark fs-5">Galata Tower</summary>
-                <p class="text-muted fst-italic">This historic watchtower, also known as the Galata Kulesi Museum, stands at the end of Istanbul’s Istiklal shopping street, offering panoramic views of the city.</p>
-                <a href="Galata.html" class="btn btn-secondary mt-2">Click for more</a>
-                <a href="Gallery.html" class="btn btn-secondary mt-2 ms-2">Past events</a>
-            </details>
+            
+            <!-- Accordion Start -->
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                
+                <!-- CRUISE BOSPHORUS -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed text-dark fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            CRUISE BOSPHORUS
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p class="text-muted fst-italic">Experience a beautiful cruise along the Bosphorus, seeing Istanbul's famous landmarks from the water. Perfect for enjoying the city's rich cultural backdrop.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Dinner Cruise Bosphorus -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed text-dark fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Dinner Cruise Bosphorus
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p class="text-muted fst-italic">General information about the Bosphorus dinner and Turkish night show cruise with a private standard table (non-alcohol).</p>
+                            <a href="EventDet.html" class="btn btn-dark mt-2">Click for more</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Galata Tower -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button collapsed text-dark fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            Galata Tower
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p class="text-muted fst-italic">This historic watchtower, also known as the Galata Kulesi Museum, stands at the end of Istanbul’s Istiklal shopping street, offering panoramic views of the city.</p>
+                            <a href="Galata.html" class="btn btn-dark mt-2">Click for more</a>
+                            <a href="Gallery.html" class="btn btn-dark mt-2 ms-2">Past events</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- Accordion End -->
         </div>
 
         <hr>
 
-        <h2 class="text-secondary mb-4">Leave a Comment</h2>
-        <form id="commentForm" action="submit_comment.php" method="post" class="mb-5">
-            <div class="mb-3 w-50">
-                <label for="name" class="form-label">Name:</label>
-                <input type="text" id="name" name="name" class="form-control" required>
-            </div>
-            <div class="mb-3 w-50">
-                <label for="comment" class="form-label">Comment:</label>
-                <textarea id="comment" name="comment" class="form-control" rows="4" required></textarea>
-            </div>
-            <input type="submit" value="Submit" class="btn btn-secondary">
-        </form>
-    </div>
+        <!-- Centered Comment Form with Dark Shadow -->
+        <div class="form-container my-4">
+            <h2 class="text-secondary mb-4 text-center">Leave a Comment</h2>
+            <form id="commentForm" action="submit_comment.php" method="post" class="mb-5">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name:</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="comment" class="form-label">Comment:</label>
+                    <textarea id="comment" name="comment" class="form-control" rows="4" required></textarea>
+                </div>
+                <input type="submit" value="Submit" class="btn btn-dark btn-lg width="25%" d-block mx-auto">
+            </form>
+        </div>
 
-    <div class="container" id="commentsSection">
-        <!-- Comments will be displayed here -->
+        <div class="container" id="commentsSection">
+            <!-- Comments will be displayed here -->
+        </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
